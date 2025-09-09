@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Wait for DOM content to load
+            document.addEventListener('DOMContentLoaded', function() {
+                // Get all elements with class "correct"
+                let corrects = document.querySelectorAll('.Correct');
+                // Add event listeners to each correct button
+                for (let i = 0; i < corrects.length; i++) {
+                    corrects[i].addEventListener('click', function() {
+                        // Set background color to green
+                        corrects[i].style.backgroundColor = 'Green';
+                        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+                        corrects[i].parentElement.querySelector('.Feedback1').innerHTML = 'Correct!';
+                    });
+                }
+                // When any incorrect answer is clicked, change color to red.
+                let incorrects = document.querySelectorAll(".Incorrect");
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        // Set background color to red
+                        incorrects[i].style.backgroundColor = 'Red';
+                        // Go to parent element of correct button and find the first element with class "feedback" which has that parent
+                        incorrects[i].parentElement.querySelector('.Feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+                document.querySelector('#Check').addEventListener('click', function(){
+                    let input = document.querySelector('input');
+                    if (input.value === '51:49'){
+                        input.style.backgroundColor = 'green';
+                        input.parentElement.querySelector('.Feedback2').innerHTML = 'Correct!';
+                    }
+                    else{
+                        input.style.backgroundColor = 'red';
+                        input.parentElement.querySelector('.Feedback2').innerHTML = 'Incorrect!'
+                    }
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                 <h3>Lana have x fruits she donates half of it. Then she split the rest into two portion.
+                 Out of two portion she gave two-third to her friend and left with 6.00.What is x?</h3>
+                <button class = "Incorrect">43 fruits.</button>
+                <button class = "Incorrect">57 fruits.</button>
+                <button class = "Correct">72 fruits.</button>
+                <button class = "Incorrect">76 fruits.</button>
+                <button class = "Incorrect">48 fruits.</button>
+                <button class = "Incorrect">80 fruits.</button>
+                <p class = "Feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                 <h3>What is the ratio of men and women in Pakistan?</h3>
+                 <input autocomplete="off" autofocus type = "text">
+                 <button id = "Check">Check Answer</button>
+                 <p class = "Feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

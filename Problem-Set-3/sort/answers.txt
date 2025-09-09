@@ -1,0 +1,14 @@
+sort1 uses: Bubble sort
+
+How do you know?: Time: Real: 1.505 in sorted50000.txt
+In reversed50000.txt--> Real: 7.807 && In random50000.txt --> Real: 7.195
+
+sort2 uses: Merge sort
+
+How do you know?: Real: 1.874 in sorted50000.txt
+In reversed50000.txt--> Real: 2.803 && In random50000.txt --> Real: 2.303
+
+sort3 uses: Selection sort
+
+How do you know?: Real: 3.297 in sorted50000.txt
+In reversed50000.txt--> Real: 4.880 && In random50000.txt --> Real: 3.441

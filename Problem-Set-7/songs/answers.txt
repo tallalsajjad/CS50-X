@@ -1,0 +1,16 @@
+AVG(energy) = 0.65906
+AVG(valence) = 0.48843
+AVG(danceability) = 0.71646
+
+REPRESENTATIVE:
+Orange
+
+HYPOTHESIZED:
+Oranges are the rebellious and bold type.
+They share a need for high-energy, confidence-boosting sounds.
+
+
+BETTER WAY:
+The better way to calculate this aura is to include
+not only avg enery ,valence and danceability
+but also consider tempo and speechiness.

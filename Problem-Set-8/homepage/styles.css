@@ -1,0 +1,21 @@
+body {
+      background-color: #000000;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+.fonts{
+    text-align: center;
+    color : #ffffff;
+}
+
+.back{
+    background-color: #1c1c1c;
+}
+.pix{
+    padding: 30px;
+    background-color: grey;
+}
