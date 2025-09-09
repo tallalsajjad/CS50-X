@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+        <style>
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                font-size: 25px
+                padding: 15px;
+                text-align: left;
+            }
+        </style>
+        <table class= table>
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Type</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for value in history %}
+            <tr>
+                <td>{{ value.symbol }}</td>
+                <td>{{ value.type }}</td>
+                <td>{{ value.shares }}</td>
+                <td>{{ value.price | usd }}</td>
+                <td>{{ value.timestamp }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+{% endblock %}
